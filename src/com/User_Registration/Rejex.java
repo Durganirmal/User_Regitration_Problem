@@ -21,4 +21,22 @@ public class Rejex {
             }
         }
     }
+
+	 public static void mail(String mailID) {
+	        regex = "^[a-z0-9]{1,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$";
+	        Pattern pattern = Pattern.compile(regex);
+	        Matcher matcher = pattern.matcher(mailID);
+	        if (matcher.matches()) {
+	            System.out.println("\nYour mailID " + mailID + " is in correct format.");
+	        } else {
+	            System.out.println("\nYour mailID is not in format.");
+	            UserDetails.mail();
+	        }
+	    }
+	}
+
+
+
+
+
 }

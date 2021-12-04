@@ -13,8 +13,6 @@ public class UserDetails extends Regex {
 	        details.lastname();
 
 	    }
-
-
 	    public static void firstname() {
 	        System.out.println("Enter the first name with first letter capital and name should be minimum 3 letters:");
 	        first_name = scan.next();
@@ -26,4 +24,13 @@ public class UserDetails extends Regex {
 	        last_name = scan.next();
 	        Regex.name(last_name);
 	    }
-	}
+	
+	    public static void mail() {
+	        System.out.println("Enter the mail with following valid format:");
+	        System.out.println("Format is E.g. abc.xyz@bl.co.in (In that abc, bl & co is mandatory)");
+	        mail_ID = scan.next();
+	        Regex.mail(mail_ID);
+	    }
+}
+
+}
